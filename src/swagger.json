@@ -1,0 +1,33 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API2",
+    "description": "Api que recebe quantidade de metros quadrados e calcula o valor do imóvel."
+  },
+  "paths": {
+    "/api/v1/calculate": {
+      "get": {
+        "summary": "Recebe quantidade de metros quadrados e calcula o valor do imóvel.",
+        "description": "Requer a API1 para consultar o valor por metro quadrado.",
+        "procuces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "amount",
+            "in": "query",
+            "description": "Quantidade em metros quadrados.",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    }
+  }
+}
