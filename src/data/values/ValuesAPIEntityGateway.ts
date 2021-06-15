@@ -6,6 +6,7 @@ export class ValuesAPIEntityGateway implements ValuesEntityGateway {
   private axios: AxiosInstance;
 
   constructor() {
+    console.log(process.env.API1_BASE_URL);
     this.axios = axios.create({
       baseURL: process.env.API1_BASE_URL
     });
@@ -17,6 +18,7 @@ export class ValuesAPIEntityGateway implements ValuesEntityGateway {
       return response.data;
     }
     catch (err) {
+      console.log(err);
       return undefined;
     }
   }

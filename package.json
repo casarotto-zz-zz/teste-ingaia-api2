@@ -7,6 +7,7 @@
     "dev": "nodemon",
     "start": "yarn build && node build/index.js",
     "build": "rimraf ./build && tsc",
+    "start:docker": "docker build -t ingaia-api2 . && docker run --name ingaia-api2 --net=bridge --env-file .env -p 3002:3002 -d ingaia-api2",
     "start:heroku": "node build/index.js"
   },
   "devDependencies": {
