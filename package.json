@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "start": "yarn build && node build/index.js",
-    "build": "rimraf ./build && tsc"
+    "build": "rimraf ./build && tsc",
+    "start:heroku": "node build/index.js"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
