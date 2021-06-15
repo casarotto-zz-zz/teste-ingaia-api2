@@ -12,6 +12,7 @@
 
 ## Instruções
 
+- Configurar arquivo __.env__ de acordo com o arquivo __.env.example__;
 - O serviço pode ser inicializado/acessado de 3 maneiras:
 * __Node__: com o comando `yarn && yarn start`
 * __Docker__: com o comando `yarn && yarn start:docker`
