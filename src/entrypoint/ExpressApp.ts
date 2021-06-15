@@ -30,8 +30,8 @@ export class ExpressApp {
 
     this.configApp();
 
-    this.app.listen(process.env.APP_PORT, () => {
-      console.log(`Server up and running on port ${process.env.APP_PORT}...`);
+    this.app.listen((process.env.PORT || 3002), () => {
+      console.log(`Server up and running on port ${(process.env.PORT || 3002)}...`);
     });
 
     return this.app;
